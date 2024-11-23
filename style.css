@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    /* Increased size */
+    grid-template-rows: repeat(3, 150px);
+    /* Increased size */
+    margin: 20px 0;
+}
+
+.cell {
+    width: 150px;
+    /* Increased size */
+    height: 150px;
+    /* Increased size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    /* Bigger symbols */
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Remove unwanted corner borders */
+.cell:nth-child(1) {
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.cell:nth-child(2) {
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.cell:nth-child(3) {
+    border-bottom: 2px solid #fff;
+}
+
+.cell:nth-child(4) {
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.cell:nth-child(5) {
+    border: 2px solid #fff;
+}
+
+.cell:nth-child(6) {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+.cell:nth-child(7) {
+    border-right: 2px solid #fff;
+}
+
+.cell:nth-child(8) {
+    border-right: 2px solid #fff;
+}
+
+.cell:nth-child(9) {
+    border-left: 2px solid #fff;
+}
+
+.cell.taken {
+    pointer-events: none;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.score-item {
+    margin: 0 30px;
+    /* Space between items */
+    text-align: center;
+}
+
+.symbol {
+    font-size: 1.5rem;
+    /* Bigger X and O symbols */
+    font-weight: bold;
+}
+
+.score-item p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+/* Add this to style the rematch button */
+.rematch-button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.rematch-button:hover {
+    background-color: #ddd;
+}
